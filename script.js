@@ -1,8 +1,9 @@
 const stocks = ["NVDA","MSFT","META","GOOGL","TSLA","SPY","QQQ"];
 
 async function fetchStock(ticker) {
+    const proxy = "https://api.allorigins.win/raw?url=";
     const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${ticker}`;
-    const response = await fetch(url);
+    const response = await fetch(proxy + encodeURIComponent(url));
     const data = await response.json();
     return data.quoteResponse.result[0];
 }
