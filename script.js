@@ -1,7 +1,7 @@
 const stocks = ["NVDA","MSFT","META","GOOGL","TSLA","SPY","QQQ"];
 
 async function fetchStock(ticker) {
-    const url = `https://financialmodelingprep.com/api/v3/quote/${ticker}?apikey=demo`;
+    const url = `https://financialmodelingprep.com/api/v3/quote/${ticker}?apikey=oOH2c3lAouivjKlMeVM8HR9hnaf5QMmD`;
     const response = await fetch(url);
     const data = await response.json();
     return data[0];
